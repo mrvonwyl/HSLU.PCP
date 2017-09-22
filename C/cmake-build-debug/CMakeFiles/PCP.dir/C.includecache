@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Dev/PCP/PCP-Excercise/C/main.c
+stdio.h
+-
+stdlib.h
+-
+stack.h
+E:/Dev/PCP/PCP-Excercise/C/stack.h
+
+E:/Dev/PCP/PCP-Excercise/C/stack.c
+stdio.h
+-
+stdlib.h
+-
+stack.h
+E:/Dev/PCP/PCP-Excercise/C/stack.h
+
+E:/Dev/PCP/PCP-Excercise/C/stack.h
+
