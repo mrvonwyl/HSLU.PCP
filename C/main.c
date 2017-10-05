@@ -39,8 +39,9 @@ int main(int argc, char** argv) {
     printf("isEmpty(myStack) = %i\n", isEmpty(myStack));
     print(myStack);
 
-    // 2.c: man kann den stack einfach frisch initialisieren
-    // daher macht es nicht viel sinn, eine clear methode zo machen
+    // 2.c:
+    // hier macht ein clear sinn, welches das topElement und alle nextElemente
+    // vom speicher Frei gibt, da es kein Garbage Collector gibt.
 }
 
 void printNumbersGoto(int n){

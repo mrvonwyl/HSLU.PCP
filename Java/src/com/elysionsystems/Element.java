@@ -18,4 +18,12 @@ public class Element {
         this.next = next;
     }
 
+    @Override
+    public String toString(){
+        String s = String.valueOf(this.value);
+        if(next != null){
+            s += ", " + next.toString();
+        }
+        return s;
+    }
 }

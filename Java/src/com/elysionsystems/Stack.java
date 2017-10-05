@@ -4,17 +4,22 @@ package com.elysionsystems;
 public class Stack {
 
     private Element topElement;
+    private int size = 0;
 
     public void push(Element e){
         e.setNext(topElement);
         topElement = e;
+        size++;
     }
     public Element top(){
         return topElement;
     }
 
     public boolean pop(){
-        topElement = topElement.getNext();
+        if (topElement!= null) {
+            topElement = topElement.getNext();
+            size--;
+        }
         return topElement == null;
     }
 
@@ -24,13 +29,7 @@ public class Stack {
             System.out.println("is empty");
         }
         else {
-            System.out.print("contains: ");
-            Element tempElement = topElement;
-            while (tempElement != null) {
-                System.out.print(tempElement.getValue() + ", ");
-                tempElement = tempElement.getNext();
-            }
-            System.out.println("top Element = " + topElement.getValue());
+            System.out.println("contains: " + topElement.toString() + ", top element: " + topElement.getValue());
         }
     }
 
@@ -39,17 +38,6 @@ public class Stack {
     }
 
     public int size(){
-        if(isEmpty()){
-            return 0;
-        }
-        else {
-            int size = 1;
-            Element tempElement = topElement;
-            while (tempElement.getNext() != null) {
-                tempElement = tempElement.getNext();
-                size++;
-            }
-            return size;
-        }
+        return size;
     }
 }
