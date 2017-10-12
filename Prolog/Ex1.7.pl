@@ -4,7 +4,7 @@ mult(1, Y, Y).
 mult(X, 1, X).
 
 mult(X, Y, Z) :-
-X > 1,
-X1 is X - 1,
+    X > 1,
+    X1 is X - 1,
 mult(X1, Y, Z1),
-Z is Y + Z1.
+    Z is Y + Z1.

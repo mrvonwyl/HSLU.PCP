@@ -6,20 +6,18 @@ add_tail(X, [H | T], [H | L]) :- add_tail(X, T, L).
 % Ex b
 
 del([], X, []).
-del([X | T], X, L1) :- del(T, X, L1).
-del([H | T], X, [H | L1]) :- del(T, X, L1).
+del([X | T], X, L) :- del(T, X, L).
+del([H | T], X, [H | L]) :- del(T, X, L).
 
 % Ex c
 
-% TODO: entweder X aus Liste löschen und wenn beide listen gleich, dann ist X nicht vorhanden
-% oder alle elemente der Liste löschen, ausser X
-
-mem_d(X, L) :- L = L1, del(L, X, L1).
+mem_d(X, L) :- del(L, X, _).
 
 
 % Ex d
 
-%rev_acc(L, A, R) :- 
+rev_acc([H | T], A, R) :- rev_acc(T, [H | A], R).
+rev_acc([], A, A). 
 
 % Ex e
 
